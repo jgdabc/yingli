@@ -1,0 +1,33 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /api
+spring:
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://123.56.4.32:3306/yinglibao?useUnicode=true&characterEncoding=UTF-8&useSSL=false
+    username: root
+    password: Pass@word01!
+    hikari:
+      # cpu核心数*2 + 1 取近似整数值
+      maximum-pool-size: 18
+  config:
+    import: classpath:conf/sms.yml,classpath:conf/realname.yml
+  data:
+    redis:
+      host: 123.56.4.32
+      jedis:
+        pool:
+          max-wait: -1
+          max-active: 8
+          min-idle: 8
+      port: 6379
+      password: daozitutu
+      database: 2
+#MyBatis-Plus
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    map-underscore-to-camel-case: true
+

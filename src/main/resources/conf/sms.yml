@@ -1,0 +1,8 @@
+sms :
+  host: https://cxkjsms.market.alicloudapi.com
+  path: /chuangxinsms/dxjk
+  app-code: 8f4eca1bde3d44f9963dbbf2542cd339
+  register-template : 【兰舟科技】您的注册验证码是%s,有效时间为3分钟。
+  login-template: 【兰舟科技】您的登录验证码是%s,有效时间为三分钟。
+
+
